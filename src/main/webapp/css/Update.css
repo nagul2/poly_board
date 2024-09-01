@@ -1,0 +1,125 @@
+@charset "UTF-8";
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #ffffff;
+}
+
+.header {
+    text-align: center;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.header img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 1200px; /* 넓이를 더 크게 조정 */
+    padding: 40px;
+    margin-top: 20px;
+    border-top: 2px solid #000;
+}
+
+.form-container h2 {
+    text-align: left;
+    margin-bottom: 30px;
+    font-size: 24px;
+    color: #333;
+    font-weight: bold;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+    font-size: 14px;
+}
+
+.form-group input[type="text"], .form-group textarea {
+    width: 100%;
+    padding: 15px; /* padding을 조금 더 넓게 조정 */
+    border: 1px solid #000; /* 검은색 테두리 */
+    border-radius: 4px;
+    font-size: 16px; /* 폰트 크기를 조금 더 키움 */
+    box-sizing: border-box;
+    background-color: #ffffff; /* 하얀 배경 */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover 시 효과 추가 */
+}
+
+.form-group textarea {
+    height: 300px; /* 텍스트 영역 높이 확대 */
+    resize: none;
+}
+
+.form-group input[type="text"]:hover, .form-group textarea:hover {
+    transform: translateY(-2.5px); 				/* 살짝 튀어나오는 효과 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 	/* 그림자 효과 */
+}
+
+/* Readonly 필드에 대한 스타일 */
+.form-group input[readonly], .form-group textarea[readonly] {
+    background-color: #f9f9f9; 		/* readonly 필드 배경 */
+    cursor: not-allowed; 			/* 커서 변경 */
+    border: 1px solid #e0e0e0; 		/* 테두리 색상 */
+}
+
+/* Readonly 필드에 대해 hover 효과 제거 */
+.form-group input[readonly]:hover, .form-group textarea[readonly]:hover {
+    transform: none; 				/* Hover 시 효과 제거 */
+    box-shadow: none; 				/* Hover 시 그림자 제거 */
+}
+
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.buttons input {
+    padding: 12px 30px;
+    border: 1px solid #000; 
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-size: 16px; 
+    font-weight: bold;
+}
+
+.buttons .submit {
+    background-color: #000;
+    color: white;
+}
+
+.buttons .submit:hover {
+    background-color: #333;
+    transform: translateY(-2px);
+}
+
+.buttons .cancel {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.buttons .cancel:hover {
+    background-color: #e0e0e0;
+    transform: translateY(-2px); 
+}
